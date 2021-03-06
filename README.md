@@ -1,7 +1,7 @@
 # Rest Jwt Test Application
 Это тестовое REST приложение с использованием Spring Security, аутентификация в котором использована с помощью JWT токена. 
 
-####Technologies:
+__Technologies:__
 - Java 11
 - Maven
 - Spring Boot
@@ -10,11 +10,11 @@
 - Lombok
 - Liquibase
 
-####Endpoints:
+__Endpoints:__
 
-#####Post
+__Post__
 - /api/v1/auth/login
 
-#####Get
+__Get__
 - /api/v1/admin/users/{id}
 - /api/v1/users/{id}
