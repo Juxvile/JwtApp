@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.Collection;
 import java.util.Date;
@@ -17,33 +16,20 @@ import java.util.Date;
 @AllArgsConstructor
 public class JwtUser implements UserDetails {
     private final Long id;
+    @JsonIgnore
     private final String username;
     private final String firstName;
     private final String lastName;
+    @JsonIgnore
     private final String password;
     private final String email;
     private final boolean enabled;
-
     @JsonIgnore
     private final Date lastPasswordResetDate;
     @JsonIgnore
     private final Collection<? extends GrantedAuthority> authorities;
+    
 
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return authorities;
-    }
-    @JsonIgnore
-    @Override
-    public String getPassword() {
-        return password;
-    }
-    @JsonIgnore
-    @Override
-    public String getUsername() {
-        return username;
-    }
     @JsonIgnore
     @Override
     public boolean isAccountNonExpired() {
