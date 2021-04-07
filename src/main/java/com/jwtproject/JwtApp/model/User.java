@@ -1,7 +1,6 @@
 package com.jwtproject.JwtApp.model;
 
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import javax.persistence.*;
